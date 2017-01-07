@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MobyDick" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPP-Bq-ZvO">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rPP-Bq-ZvO" secondAttribute="height" multiplier="1:1" id="oR3-ox-S3Z"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="87G-HV-wsN">
+                                <segments>
+                                    <segment title="red"/>
+                                    <segment title="green"/>
+                                    <segment title="purple"/>
+                                    <segment title="blue"/>
+                                </segments>
+                                <connections>
+                                    <action selector="colorChosen:" destination="BYZ-38-t0r" eventType="valueChanged" id="LTV-tf-nZo"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rwe-6N-NHz">
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4d-Zm-lHI">
+                                <frame key="frameInset" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="Ek9-h8-Dc5">
+                                        <connections>
+                                            <action selector="rewindBarButtonTapped:" destination="BYZ-38-t0r" id="TX7-JX-ARu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="22n-tF-0wr"/>
+                                    <barButtonItem systemItem="fastForward" id="sDu-OH-CzC">
+                                        <connections>
+                                            <action selector="fastForwardBarButtonTapped:" destination="BYZ-38-t0r" id="UIi-tJ-8LP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="87G-HV-wsN" secondAttribute="trailing" id="9Gu-s4-KnD"/>
+                            <constraint firstItem="Rwe-6N-NHz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AJ4-Sf-lhu"/>
+                            <constraint firstItem="rPP-Bq-ZvO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="E4r-N1-08c"/>
+                            <constraint firstItem="87G-HV-wsN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FbA-B9-6vt"/>
+                            <constraint firstItem="Rwe-6N-NHz" firstAttribute="top" secondItem="87G-HV-wsN" secondAttribute="bottom" constant="16" id="ShS-pY-JJX"/>
+                            <constraint firstItem="rPP-Bq-ZvO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="iAt-Mq-MPt"/>
+                            <constraint firstItem="87G-HV-wsN" firstAttribute="top" secondItem="rPP-Bq-ZvO" secondAttribute="bottom" constant="44" id="pI7-j7-lcs"/>
+                            <constraint firstAttribute="trailing" secondItem="rPP-Bq-ZvO" secondAttribute="trailing" id="uqf-K4-qsv"/>
+                            <constraint firstItem="Rwe-6N-NHz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wtE-GL-9DI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="Rwe-6N-NHz" id="7GN-dO-vrG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+</document>

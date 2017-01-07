@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <!-- Basic Page Needs -->
+        <meta charset="utf-8" />
+        <title>Apologies to Herman Melville</title>
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        
+        <!-- Mobile Specific Metas
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <!-- FONT
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css" />
+        
+        <!-- CSS
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="stylesheet" href="normalize.css" />
+        <link rel="stylesheet" href="skeleton.css" />
+        
+        <style>
+            .box {
+                height: 10px;
+                width: 50px;
+                background-color: powderblue;
+                padding: 10px;
+            }
+        </style>
+        
+        <script>
+            function callMeBackIshmael(x) {
+                alert(x);
+                window.webkit.messageHandlers.runSwift.postMessage({ myColor : x.style.backgroundColor });
+            }
+        
+           function findText() {
+                el = document.getElementsByClassName('hero-headline');
+                for (i = 0 ; i < el.length; i++) {
+                    el[i].innerHTML = 'Vic is Vic, Cris is Chris';
+                }
+                //.innerHTML = 'Vic is Vic, Cris is Chris';";
+                // document.querySelector('h1').style.color = "red";
+            }
+        
+        </script>
+    </head>
+    <body>
+        
+        <!-- Primary Page Layout
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <div class="container">
+            <div class="row">
+                <div class="one-half column" style="margin-top: 25%">
+                    <h4>Basic Page</h4>
+                    <div class="box" id="box1" onclick="callMeBackIshmael(this)"></div>
+                    <div class="box" id="box2" onclick="callMeBackIshmael(this)"></div>
+                    <div id="secretMessage"></div>
+                    <p>
+                    <a href="https://www.apple.com">Go to Apple</a>
+                    <a href="moby://do/something">And now for something completely different</a>
+                    <p>
+                    <a href="https://www.youtube.com/watch?v=r9-42mu1D9Y">Moby Dick</a>
+                    <a href="http://www.mobydickthewhale.com/moby-dick/moby-dick-chapter-1.htm">Moby Dick</a>
+                    </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- End Document
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    </body>
+</html>
